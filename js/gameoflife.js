@@ -85,11 +85,11 @@ const calculateNext = (state) => {
 };
 
 const iterate = (state, iterations) => {
-  const gamestates = [state];
+  const gamestate = [state];
   for (let i = 0; i < iterations; i++){
-    gamestates.push(calculateNext(gamestates[gamestates.length - 1]));
+    gamestate.push(calculateNext(gamestate[gamestate.length - 1]));
   }
-  return gamestates;
+  return gamestate;
 };
 
 const main = (pattern, iterations) => {
